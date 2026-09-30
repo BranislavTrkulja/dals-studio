@@ -1104,9 +1104,22 @@ address {
   color: var(--color-espresso);
   border-bottom: 1px solid var(--color-blush);
   padding-bottom: 2px;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
   transition: color var(--transition-medium),
               border-color var(--transition-medium);
+}
+
+.contact-icon {
+  flex-shrink: 0;
+  color: var(--color-stone);
+  transition: color var(--transition-medium);
+}
+
+.contact-link:hover .contact-icon,
+.contact-link:focus-visible .contact-icon {
+  color: var(--color-terracotta);
 }
 
 .contact-link:hover,
