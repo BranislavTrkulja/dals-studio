@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Dals Studio by Anica — kozmetički salon u Novom Sadu. Profesionalni manikir, pedikir i njega noktiju u prijatnoj atmosferi sa pogledom na Frušku goru. Zakažite termin.">
+  <meta name="theme-color" content="#F6F1EB">
+  <meta property="og:title" content="Dals Studio by Anica — Kozmetički salon Novi Sad">
+  <meta property="og:description" content="Profesionalni manikir, pedikir i njega noktiju u Novom Sadu. Stručan rad, prijatna atmosfera i potpuna privatnost.">
+  <meta property="og:type" content="website">
+  <title>Dals Studio by Anica — Kozmetički salon Novi Sad</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===================== NAVIGATION ===================== -->
+  <header class="site-nav" id="site-nav" role="banner">
+    <div class="nav-inner">
+      <a href="#" class="nav-brand" aria-label="Dals Studio by Anica — početna stranica">Dals Studio</a>
+
+      <!-- Desktop: nav links -->
+      <nav class="nav-links" aria-label="Glavna navigacija">
+        <a href="#usluge">Usluge</a>
+        <a href="#galerija">Galerija</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+
+      <!-- Desktop: booking button -->
+      <button type="button" class="nav-book-btn" data-modal-open aria-haspopup="dialog">ZAKAŽI TERMIN</button>
+
+      <!-- Mobile: compact booking + hamburger -->
+      <div class="nav-mobile-right">
+        <button type="button" class="nav-book-mobile" data-modal-open aria-haspopup="dialog" aria-label="Zakaži termin">ZAKAŽI</button>
+        <button class="nav-hamburger" id="nav-hamburger" aria-label="Otvori meni" aria-expanded="false" aria-controls="mobile-nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== MOBILE NAV OVERLAY ===================== -->
+  <div class="mobile-nav" id="mobile-nav" role="dialog" aria-modal="true" aria-label="Mobilna navigacija">
+    <nav class="mobile-nav-links" aria-label="Mobilna navigacija">
+      <a href="#usluge" class="mobile-nav-link">Usluge</a>
+      <a href="#galerija" class="mobile-nav-link">Galerija</a>
+      <a href="#kontakt" class="mobile-nav-link">Kontakt</a>
+    </nav>
+    <div class="mobile-nav-footer">
+      <a href="tel:+381606623383" class="mobile-nav-contact" id="mobile-phone-link">+381 60 662 3383</a>
+      <a href="https://instagram.com/dalsstudiobyanica" class="mobile-nav-contact" target="_blank" rel="noopener">@dalsstudiobyanica</a>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- ===================== HERO CAROUSEL ===================== -->
+    <section class="hero" aria-label="Uvod" id="hero-carousel">
+
+      <!-- Slides -->
+      <div class="carousel-track" aria-live="off">
+        <div class="carousel-slide is-active">
+          <img src="images/hero-0.jpeg" alt="Dals Studio by Anica — salon enterijer" loading="eager" fetchpriority="high" class="hero-img">
+        </div>
+        <div class="carousel-slide">
+          <img src="images/hero.jpeg" alt="Dals Studio by Anica — salon enterijer" loading="lazy" width="2048" height="1536" class="hero-img">
+        </div>
+        <div class="carousel-slide">
+          <img src="images/hero-2.jpeg" alt="Dals Studio by Anica — salon enterijer" loading="lazy" width="2048" height="1536" class="hero-img">
+        </div>
+        <div class="carousel-slide">
+          <img src="images/hero-3.jpeg" alt="Dals Studio by Anica — detalj salona" loading="lazy" width="1536" height="2048" class="hero-img">
+        </div>
+        <div class="carousel-slide">
+          <img src="images/hero-4.jpeg" alt="Dals Studio by Anica — atmosfera salona" loading="lazy" width="2048" height="1536" class="hero-img">
+        </div>
+        <div class="carousel-slide">
+          <img src="images/hero-5.jpeg" alt="Dals Studio by Anica — salon prostor" loading="lazy" width="1536" height="2048" class="hero-img">
+        </div>
+      </div>
+
+      <div class="hero-overlay" aria-hidden="true"></div>
+
+      <!-- Content -->
+      <div class="hero-content">
+        <p class="hero-label">Kozmetički salon &middot; Novi Sad</p>
+        <h1 class="hero-headline">Svaki detalj<br><em>ima svoju priču</em></h1>
+        <a href="#usluge" class="hero-scroll-cta" aria-label="Pogledajte usluge i cene">
+          <span>Pogledajte usluge</span>
+          <span class="hero-cta-line" aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <!-- Prev / Next arrows -->
+      <button class="carousel-arrow carousel-arrow--prev" id="carousel-prev" aria-label="Prethodna slika">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+          <path d="M11 3L5 9L11 15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <button class="carousel-arrow carousel-arrow--next" id="carousel-next" aria-label="Sledeća slika">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+          <path d="M7 3L13 9L7 15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+
+      <!-- Dot indicators -->
+      <div class="carousel-dots" aria-label="Navigacija slajdova" role="tablist">
+        <button class="carousel-dot is-active" role="tab" aria-selected="true"  aria-label="Slajd 1"></button>
+        <button class="carousel-dot"            role="tab" aria-selected="false" aria-label="Slajd 2"></button>
+        <button class="carousel-dot"            role="tab" aria-selected="false" aria-label="Slajd 3"></button>
+        <button class="carousel-dot"            role="tab" aria-selected="false" aria-label="Slajd 4"></button>
+        <button class="carousel-dot"            role="tab" aria-selected="false" aria-label="Slajd 5"></button>
+        <button class="carousel-dot"            role="tab" aria-selected="false" aria-label="Slajd 6"></button>
+      </div>
+
+      <div class="hero-scroll-hint" aria-hidden="true"></div>
+    </section>
+
+    <!-- ===================== USLUGE (services + prices combined) ===================== -->
+    <section class="section services" id="usluge" aria-labelledby="usluge-heading">
+      <div class="section-inner section-narrow">
+        <p class="section-label">Usluge &amp; Cenovnik</p>
+        <h2 class="section-title" id="usluge-heading">Naše usluge</h2>
+        <p class="salon-about">Salon koji se gradio dugi niz godina, u stanu na četvrtom spratu sa pogledom na Frušku goru. Svaki klijent ima svoju privatnost i domaćinsku atmosferu — jer cilj nije samo ,,da se odradi", nego da uz stručan rad nađete malo mira.</p>
+
+        <!-- ===== MANIKIR ===== -->
+        <h3 class="service-major-label">Manikir</h3>
+
+        <!-- Osnovna nega -->
+        <div class="service-category">
+          <h4 class="service-cat-title">Osnovna nega</h4>
+          <div class="service-cat-divider" aria-hidden="true"></div>
+          <ul class="service-list" role="list">
+            <li class="service-item">
+              <div class="service-item-main">
+                <span class="service-name">Klasičan manikir <span class="service-name-note">30 min</span></span>
+                <span class="service-price">1.800 rsd</span>
+              </div>
+              <p class="service-desc">Kompletna priprema nokta, obrada zanoktica, oblikovanje ploče i završna nega.</p>
+            </li>
+            <li class="service-item">
+              <div class="service-item-main">
+                <span class="service-name">Manikir + lakiranje <span class="service-name-note">45 min</span></span>
+                <span class="service-price">2.200 rsd</span>
+              </div>
+              <p class="service-desc">Nanošenje običnog laka.</p>
+            </li>
+            <li class="service-item">
+              <div class="service-item-main">
+                <span class="service-name">Manikir + gel lak <span class="service-name-note">60 min</span></span>
+                <span class="service-price">2.800 rsd</span>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-item-main">
+                <span class="service-name">Manikir + french <span class="service-name-note">60 min</span></span>
+                <span class="service-price">3.000 rsd</span>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-item-main">
+                <span class="service-name">Spa manikir <span class="service-name-note">60 min</span></span>
+                <span class="service-price">3.200 rsd</span>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-item-main">
+                <span class="service-name">Spa manikir + gel lak <span class="service-name-note">90 min</span></span>
+                <span class="service-price">3.800 rsd</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Ojačavanje -->
+        <div class="service-category service-category--spaced">
+          <h4 class="service-cat-title">Ojačavanje prirodnih noktiju gelom</h4>
+          <div class="service-cat-divider" aria-hidden="true"></div>
+          <ul class="service-list" role="list">
+            <li class="service-item">
+              <div class="service-item-main">
+                <span class="service-name">S dužina <span class="service-name-note">90 min</span></span>
+                <span class="service-price">3.000 rsd</span>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-item-main">
+                <span class="service-name">M dužina <span class="service-name-note">90 min</span></span>
+                <span class="service-price">3.300 rsd</span>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-item-main">
+                <span class="service-name">L dužina <span class="service-name-note">90 min</span></span>
+                <span class="service-price">3.600 rsd</span>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-item-main">
+                <span class="service-name">Frenč — dodatak <span class="service-name-note">15 min</span></span>
+                <span class="service-price">300 rsd</span>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-item-main">
+                <span class="service-name">Nail art — dodatak <span class="service-name-note">15 min</span></span>
+                <span class="service-price">300 rsd</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Izlivanje -->
+        <div class="service-category service-category--spaced">
+          <h4 class="service-cat-title">Izlivanje noktiju gelom</h4>
+          <div class="service-cat-divider" aria-hidden="true"></div>
+          <ul class="service-list" role="list">
+            <li class="service-item">
+              <div class="service-item-main">
+                <span class="service-name">S dužina <span class="service-name-note">120 min</span></span>
+                <span class="service-price">3.800 rsd</span>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-item-main">
+                <span class="service-name">M dužina <span class="service-name-note">120 min</span></span>
+                <span class="service-price">4.200 rsd</span>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-item-main">
+                <span class="service-name">L dužina <span class="service-name-note">120 min</span></span>
+                <span class="service-price">4.600 rsd</span>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-item-main">
+                <span class="service-name">XL dužina <span class="service-name-note">120 min</span></span>
+                <span class="service-price">5.000 rsd</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Nadogradnja tipsama -->
+        <div class="service-category service-category--spaced">
+          <h4 class="service-cat-title">Nadogradnja noktiju tipsama</h4>
+          <div class="service-cat-divider" aria-hidden="true"></div>
+          <ul class="service-list" role="list">
+            <li class="service-item">
+              <div class="service-item-main">
+                <span class="service-name">S dužina <span class="service-name-note">120 min</span></span>
+                <span class="service-price">3.800 rsd</span>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-item-main">
+                <span class="service-name">M dužina <span class="service-name-note">120 min</span></span>
+                <span class="service-price">4.200 rsd</span>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-item-main">
+                <span class="service-name">L dužina <span class="service-name-note">120 min</span></span>
+                <span class="service-price">4.600 rsd</span>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-item-main">
+                <span class="service-name">XL dužina <span class="service-name-note">120 min</span></span>
+                <span class="service-price">5.000 rsd</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Korekcija -->
+        <div class="service-category service-category--spaced">
+          <h4 class="service-cat-title">Korekcija noktiju</h4>
+          <div class="service-cat-divider" aria-hidden="true"></div>
+          <ul class="service-list" role="list">
+            <li class="service-item">
+              <div class="service-item-main">
+                <span class="service-name">S dužina <span class="service-name-note">120 min</span></span>
+                <span class="service-price">3.200 rsd</span>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-item-main">
+                <span class="service-name">M dužina <span class="service-name-note">120 min</span></span>
+                <span class="service-price">3.500 rsd</span>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-item-main">
+                <span class="service-name">L dužina <span class="service-name-note">120 min</span></span>
+                <span class="service-price">3.800 rsd</span>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-item-main">
+                <span class="service-name">XL dužina <span class="service-name-note">120 min</span></span>
+                <span class="service-price">4.200 rsd</span>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-item-main">
+                <span class="service-name">Tuđi rad <span class="service-name-note">120 min</span></span>
+                <span class="service-price">4.000 rsd</span>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-item-main">
+                <span class="service-name">1 nokat <span class="service-name-note">20 min</span></span>
+                <span class="service-price">500 rsd</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Skidanje -->
+        <div class="service-category service-category--spaced">
+          <h4 class="service-cat-title">Skidanje</h4>
+          <div class="service-cat-divider" aria-hidden="true"></div>
+          <ul class="service-list" role="list">
+            <li class="service-item">
+              <div class="service-item-main">
+                <span class="service-name">Skidanje gel laka + manikir <span class="service-name-note">40 min</span></span>
+                <span class="service-price">2.000 rsd</span>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-item-main">
+                <span class="service-name">Skidanje gela + manikir <span class="service-name-note">40 min</span></span>
+                <span class="service-price">2.300 rsd</span>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-item-main">
+                <span class="service-name">Skidanje materijala <span class="service-name-note">30 min</span></span>
+                <span class="service-price">1.200 rsd</span>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-item-main">
+                <span class="service-name">Skidanje tuđeg rada — S <span class="service-name-note">30 min</span></span>
+                <span class="service-price">1.500 rsd</span>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-item-main">
+                <span class="service-name">Skidanje tuđeg rada — L <span class="service-name-note">30 min</span></span>
+                <span class="service-price">2.000 rsd</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Problematični nokti -->
+        <div class="service-category service-category--spaced">
+          <h4 class="service-cat-title">Obrada problematičnih noktiju — ruke</h4>
+          <div class="service-cat-divider" aria-hidden="true"></div>
+          <ul class="service-list" role="list">
+            <li class="service-item">
+              <div class="service-item-main">
+                <span class="service-name">Jednostavnija problematika <span class="service-name-note">60 min</span></span>
+                <span class="service-price">2.500 rsd</span>
+              </div>
+              <p class="service-desc">Problemi nastali pod uticajem gljivica i bakterija.</p>
+            </li>
+            <li class="service-item">
+              <div class="service-item-main">
+                <span class="service-name">Složenija problematika <span class="service-name-note">60 min</span></span>
+                <span class="service-price">3.000 rsd</span>
+              </div>
+              <p class="service-desc">Problemi nastali pod uticajem gljivica i bakterija.</p>
+            </li>
+            <li class="service-item">
+              <div class="service-item-main">
+                <span class="service-name">Kontrolni tretman <span class="service-name-note">40 min</span></span>
+                <span class="service-price">2.000 rsd</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Dodaci i ukrasi -->
+        <div class="service-category service-category--spaced">
+          <h4 class="service-cat-title">Dodaci i ukrasi</h4>
+          <div class="service-cat-divider" aria-hidden="true"></div>
+          <ul class="service-list" role="list">
+            <li class="service-item">
+              <div class="service-item-main">
+                <span class="service-name">Frenč — dodatak <span class="service-name-note">15 min</span></span>
+                <span class="service-price">300 rsd</span>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-item-main">
+                <span class="service-name">Babyboomer — dodatak <span class="service-name-note">15 min</span></span>
+                <span class="service-price">500 rsd</span>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-item-main">
+                <span class="service-name">Jednostavan nail art — po noktu <span class="service-name-note">15 min</span></span>
+                <span class="service-price">300 rsd</span>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-item-main">
+                <span class="service-name">Složeniji nail art — po noktu <span class="service-name-note">20 min</span></span>
+                <span class="service-price">500 rsd</span>
+              </div>
+              <p class="service-desc">Linije, cvetići, folije, kamenčići itd.</p>
+            </li>
+            <li class="service-item">
+              <div class="service-item-main">
+                <span class="service-name">Ukrasi — po noktu <span class="service-name-note">15 min</span></span>
+                <span class="service-price">100 rsd</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- FULL-BLEED EDITORIAL BREAK -->
+      <div class="service-break" aria-hidden="true">
+        <!-- SWAP: replace with close-up nail detail photo, warm light -->
+        <img src="images/service-break-cropped.jpeg" alt="" loading="lazy" width="1633" height="923" class="service-break-img">
+      </div>
+
+      <div class="section-inner section-narrow">
+
+        <!-- ===== PEDIKIR ===== -->
+        <h3 class="service-major-label">Pedikir</h3>
+
+        <!-- Estetski -->
+        <div class="service-category">
+          <h4 class="service-cat-title">Estetski pedikir</h4>
+          <div class="service-cat-divider" aria-hidden="true"></div>
+          <ul class="service-list" role="list">
+            <li class="service-item">
+              <div class="service-item-main">
+                <span class="service-name">Estetski pedikir <span class="service-name-note">60 min</span></span>
+                <span class="service-price">2.800 rsd</span>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-item-main">
+                <span class="service-name">Estetski pedikir + lakiranje <span class="service-name-note">75 min</span></span>
+                <span class="service-price">3.200 rsd</span>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-item-main">
+                <span class="service-name">Estetski pedikir + gel lak <span class="service-name-note">90 min</span></span>
+                <span class="service-price">4.000 rsd</span>
+              </div>
+              <p class="service-desc">Obrada zanoktica, ploča i blaga obrada peta uz nanošenje gel laka.</p>
+            </li>
+            <li class="service-item">
+              <div class="service-item-main">
+                <span class="service-name">Spa pedikir <span class="service-name-note">60 min</span></span>
+                <span class="service-price">3.800 rsd</span>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-item-main">
+                <span class="service-name">Spa pedikir + gel lak <span class="service-name-note">90 min</span></span>
+                <span class="service-price">4.500 rsd</span>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-item-main">
+                <span class="service-name">Gel lak — noge <span class="service-name-note">60 min</span></span>
+                <span class="service-price">2.300 rsd</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Medicinski pedikir -->
+        <div class="service-category service-category--spaced">
+          <h4 class="service-cat-title">Medicinski pedikir</h4>
+          <div class="service-cat-divider" aria-hidden="true"></div>
+          <ul class="service-list" role="list">
+            <li class="service-item">
+              <div class="service-item-main">
+                <span class="service-name">Osnovni <span class="service-name-note">60 min</span></span>
+                <span class="service-price">4.000 rsd</span>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-item-main">
+                <span class="service-name">Zahtevniji <span class="service-name-note">80 min</span></span>
+                <span class="service-price">4.800 rsd</span>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-item-main">
+                <span class="service-name">Jako zahtevan <span class="service-name-note">90 min</span></span>
+                <span class="service-price">5.500 rsd</span>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-item-main">
+                <span class="service-name">Ekstremno problematičan <span class="service-name-note">90 min</span></span>
+                <span class="service-price">6.500 rsd</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Sanacije i protetika -->
+        <div class="service-category service-category--spaced">
+          <h4 class="service-cat-title">Sanacije i protetika</h4>
+          <div class="service-cat-divider" aria-hidden="true"></div>
+          <ul class="service-list" role="list">
+            <li class="service-item">
+              <div class="service-item-main">
+                <span class="service-name">Sanacija uraslog nokta <span class="service-name-note">20 min</span></span>
+                <span class="service-price">1.500 rsd</span>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-item-main">
+                <span class="service-name">Sanacija uraslog nokta — zahtevnija <span class="service-name-note">30 min</span></span>
+                <span class="service-price">2.000 rsd</span>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-item-main">
+                <span class="service-name">Sanacija kurjeg oka <span class="service-name-note">20 min</span></span>
+                <span class="service-price">1.000 rsd</span>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-item-main">
+                <span class="service-name">Sanacija kurjeg oka — više komada <span class="service-name-note">40 min</span></span>
+                <span class="service-price">1.500 rsd</span>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-item-main">
+                <span class="service-name">Sanacija žuljeva / zadebljanja <span class="service-name-note">30 min</span></span>
+                <span class="service-price">1.500 rsd</span>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-item-main">
+                <span class="service-name">Obrada deformisanog nokta — po noktu <span class="service-name-note">20 min</span></span>
+                <span class="service-price">800 rsd</span>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-item-main">
+                <span class="service-name">Protetika nokta <span class="service-name-note">60 min</span></span>
+                <span class="service-price">3.000 rsd</span>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-item-main">
+                <span class="service-name">Proteza nokta — postavljanje <span class="service-name-note">60 min</span></span>
+                <span class="service-price">3.000 rsd</span>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-item-main">
+                <span class="service-name">Proteza nokta — korekcija <span class="service-name-note">40 min</span></span>
+                <span class="service-price">1.500 rsd</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <p class="services-note">Sve cene su orijentacione. Konačna cena se dogovara na mestu, u zavisnosti od dužine i stanja noktiju.</p>
+
+        <!-- Subtle inline booking CTA after services -->
+        <div class="services-booking-cta">
+          <p class="services-cta-prompt">Pronašli ste ono što tražite?</p>
+          <button type="button" class="services-cta-link" data-modal-open aria-haspopup="dialog">
+            Zakažite termin <span aria-hidden="true">→</span>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================== GALLERY ===================== -->
+    <section class="section gallery-section" id="galerija" aria-labelledby="galerija-heading">
+      <div class="section-inner gallery-header">
+        <p class="section-label">Galerija</p>
+        <h2 class="section-title" id="galerija-heading">Naši radovi</h2>
+      </div>
+
+      <div class="gallery-grid" role="list" aria-label="Fotografije radova">
+        <div class="gallery-item gallery-item--portrait" role="listitem">
+          <img src="images/gallery-1.jpeg" alt="Manikir — detalj rada" loading="lazy" width="1754" height="2048">
+        </div>
+        <div class="gallery-item gallery-item--portrait" role="listitem">
+          <img src="images/gallery-3.jpeg" alt="Gel lak — detalj rada" loading="lazy" width="1278" height="2048">
+        </div>
+        <div class="gallery-item gallery-item--portrait" role="listitem">
+          <img src="images/gallery-4.jpeg" alt="Pedikir — detalj rada" loading="lazy" width="1536" height="2048">
+        </div>
+        <div class="gallery-item gallery-item--portrait" role="listitem">
+          <img src="images/gallery-5.jpeg" alt="Nail art — detalj rada" loading="lazy" width="1080" height="1350">
+        </div>
+        <div class="gallery-item gallery-item--portrait" role="listitem">
+          <img src="images/gallery-6.jpeg" alt="Akril produženje — detalj rada" loading="lazy" width="1536" height="2048">
+        </div>
+        <div class="gallery-item gallery-item--portrait" role="listitem">
+          <img src="images/gallery-7.jpeg" alt="Gel lak — detalj rada" loading="lazy" width="1152" height="1536">
+        </div>
+        <div class="gallery-item gallery-item--portrait" role="listitem">
+          <img src="images/service-break.jpeg" alt="Manikir rad — detalj" loading="lazy" width="944" height="2048">
+        </div>
+        <div class="gallery-item gallery-item--portrait" role="listitem">
+          <img src="images/gallery-8.jpeg" alt="Naš rad — detalj" loading="lazy" width="1152" height="1536">
+        </div>
+        <div class="gallery-item gallery-item--portrait" role="listitem">
+          <img src="images/gallery-9.jpeg" alt="Naš rad — detalj" loading="lazy" width="1152" height="1536">
+        </div>
+        <div class="gallery-item gallery-item--portrait" role="listitem">
+          <img src="images/gallery-10.jpeg" alt="Naš rad — detalj" loading="lazy" width="1152" height="1536">
+        </div>
+        <div class="gallery-item gallery-item--portrait" role="listitem">
+          <img src="images/gallery-11.jpeg" alt="Naš rad — detalj" loading="lazy" width="2046" height="2046">
+        </div>
+        <div class="gallery-item gallery-item--portrait" role="listitem">
+          <img src="images/gallery-12.jpeg" alt="Naš rad — detalj" loading="lazy" width="1152" height="1536">
+        </div>
+        <div class="gallery-item gallery-item--portrait" role="listitem">
+          <img src="images/gallery-13.jpeg" alt="Naš rad — detalj" loading="lazy" width="1080" height="1920">
+        </div>
+        <div class="gallery-item gallery-item--portrait" role="listitem">
+          <img src="images/gallery-14.jpeg" alt="Naš rad — detalj" loading="lazy" width="1152" height="1536">
+        </div>
+      </div>
+
+      <div class="section-inner gallery-footer">
+        <a href="https://instagram.com/dalsstudiobyanica" target="_blank" rel="noopener" class="link-arrow" aria-label="Pogledajte više radova na Instagramu — otvara se u novom tabu">
+          Pogledajte sve radove na Instagramu &rarr;
+        </a>
+      </div>
+    </section>
+
+    <!-- ===================== TERMIN + KONTAKT (combined) ===================== -->
+    <section class="section combined-section" id="kontakt" aria-labelledby="booking-heading">
+      <div class="combined-inner">
+
+        <!-- LEFT / TOP: Booking -->
+        <div class="combined-booking">
+          <p class="section-label">Termin</p>
+          <h2 class="booking-headline" id="booking-heading">Zakažite<br><em>vaš termin</em></h2>
+          <p class="booking-body">
+            Odaberite uslugu i nastavite razgovor putem WhatsApp-a.
+            Termin potvrđujemo direktno sa vama — brzo i bez komplikacija.
+          </p>
+          <button type="button" class="btn-primary" data-modal-open aria-haspopup="dialog">ZAKAŽI TERMIN</button>
+          <div class="booking-hours" aria-label="Radno vreme">
+            <p>Ponedeljak – Petak: 09:00 – 20:00</p>
+            <p>Subota: 09:00 – 16:00</p>
+            <p>Nedelja: zatvoreno</p>
+          </div>
+        </div>
+
+        <!-- RIGHT / BOTTOM: Contact -->
+        <div class="combined-contact">
+          <p class="section-label">Kontakt</p>
+          <h2 class="section-title combined-contact-title" id="kontakt-heading">Kako do nas</h2>
+
+          <address class="contact-address">
+            <p class="contact-street">Bulevar patrijaha Pavla 25, stan 29</p>
+            <p class="contact-city">21000 Novi Sad (4. sprat, ima lift)</p>
+          </address>
+
+          <ul class="contact-links" role="list">
+            <li><a href="tel:+381606623383" class="contact-link" id="contact-phone-link">+381 60 662 3383</a></li>
+            <li><a href="https://instagram.com/dalsstudiobyanica" target="_blank" rel="noopener" class="contact-link">@dalsstudiobyanica</a></li>
+          </ul>
+
+          <div class="contact-map">
+            <iframe
+              src="https://maps.google.com/maps?q=Bulevar+patrijaha+Pavla+25,+Novi+Sad,+Serbia&output=embed"
+              width="100%"
+              height="300"
+              style="border:0;"
+              allowfullscreen
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Lokacija Dals Studio by Anica — Bulevar patrijaha Pavla 25, Novi Sad"
+            ></iframe>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <p class="footer-brand">Dals Studio by Anica</p>
+      <p class="footer-copy">&copy; 2025 Anica Brekalo PR Kozmetički salon Dals Studio by Anica. PIB: 115748434</p>
+      <nav class="footer-nav" aria-label="Footer navigacija">
+        <a href="#usluge">Usluge</a>
+        <a href="#galerija">Galerija</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- ===================== BOOKING MODAL ===================== -->
+  <div class="booking-modal" id="booking-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+    <div class="modal-backdrop" id="modal-backdrop" aria-hidden="true"></div>
+    <div class="modal-panel" role="document">
+
+      <button class="modal-close" id="modal-close" type="button" aria-label="Zatvori">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+          <line x1="1" y1="1" x2="13" y2="13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="13" y1="1" x2="1" y2="13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </button>
+
+      <div class="modal-content">
+        <p class="modal-label">Zakaži termin</p>
+        <h2 class="modal-title" id="modal-title">Odaberi uslugu</h2>
+        <p class="modal-intro">Odaberi uslugu, a zatim nastavi razgovor sa salonom putem WhatsApp-a.</p>
+
+        <fieldset class="modal-services" id="modal-services">
+          <legend class="sr-only">Izbor usluge</legend>
+          <!-- Rendered by main.js from SALON_CONFIG -->
+        </fieldset>
+
+        <div class="modal-cta-area">
+          <a
+            href="#"
+            class="btn-primary modal-whatsapp-btn"
+            id="modal-whatsapp-btn"
+            aria-disabled="true"
+            tabindex="-1"
+          >
+            <svg class="btn-icon" width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            NASTAVI NA WHATSAPP
+            <svg class="btn-arrow" width="14" height="10" viewBox="0 0 14 10" fill="none" aria-hidden="true">
+              <path d="M1 5h12M8 1l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+
+          <p class="modal-disclaimer">
+            WhatsApp će otvoriti pripremljenu poruku za salon. Poruka se <strong>ne šalje automatski</strong> — možeš je pregledati i izmeniti pre slanja.
+          </p>
+
+          <div class="modal-phone-alt">
+            <p class="modal-phone-label">Ili pozovi salon</p>
+            <a href="tel:+381606623383" class="modal-phone-number" id="modal-phone-link">+381 60 662 3383</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
