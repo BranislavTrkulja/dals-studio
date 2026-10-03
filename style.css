@@ -819,22 +819,44 @@ address {
 /* Service break — full-bleed editorial image between categories */
 .service-break {
   width: 100%;
-  max-height: 340px;
+  height: 340px;
   overflow: hidden;
   margin: var(--sp-8) 0;
 }
 
 @media (min-width: 768px) {
   .service-break {
-    max-height: 440px;
+    height: 440px;
   }
 }
 
-.service-break img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 20%;
+
+/* Manikir break uses background-image for reliable focal-point control */
+.service-break--manikir {
+  background-image: url('images/break-manikir.jpeg');
+  background-size: cover;
+  background-position: 50% 45%;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 768px) {
+  .service-break--manikir {
+    background-position: 50% 57%;
+  }
+}
+
+/* Pedikir break */
+.service-break--pedikir {
+  background-image: url('images/break-pedikir.jpeg');
+  background-size: cover;
+  background-position: 50% 45%;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 768px) {
+  .service-break--pedikir {
+    background-position: 50% 95%;
+  }
 }
 
 

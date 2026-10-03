@@ -358,7 +358,7 @@ var SALON_CONFIG = {
     });
   });
 
-  document.querySelectorAll('.service-break img').forEach(function (el) {
+  document.querySelectorAll('.service-break--manikir, .service-break--pedikir').forEach(function (el) {
     el.classList.add('reveal-clip');
   });
 
