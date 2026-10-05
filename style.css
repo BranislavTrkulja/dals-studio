@@ -77,7 +77,6 @@ body {
 img {
   display: block;
   max-width: 100%;
-  height: auto;
 }
 
 a {
@@ -507,6 +506,7 @@ address {
   object-fit: cover;
   object-position: center;
 }
+
 
 .hero-overlay {
   position: absolute;
